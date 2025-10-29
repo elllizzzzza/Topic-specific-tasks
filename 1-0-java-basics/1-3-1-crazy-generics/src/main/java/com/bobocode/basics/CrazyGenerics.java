@@ -200,6 +200,10 @@ public class CrazyGenerics {
          */
         // todo: update method signature and implement it
         public static <T extends BaseEntity> boolean hasDuplicates(Collection<T> entities, T targetEntity) {
+            if (entities == null || targetEntity.getUuid() == null) {
+                return false;
+            }
+
             return entities.stream()
                     .filter(e -> e.getUuid().equals(targetEntity.getUuid()))
                     .count() > 1;

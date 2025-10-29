@@ -1,7 +1,12 @@
 package com.expertsoft.model;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import java.util.List;
 
+@Getter
+@Setter
 public class Customer {
 
     public Customer() {}
@@ -10,38 +15,6 @@ public class Customer {
     private String email;
     private AddressInfo address;
     private List<Order> orders;
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public AddressInfo getAddress() {
-        return address;
-    }
-
-    public void setAddress(AddressInfo address) {
-        this.address = address;
-    }
-
-    public List<Order> getOrders() {
-        return orders;
-    }
-
-    public void setOrders(List<Order> orders) {
-        this.orders = orders;
-    }
 
     @Override
     public boolean equals(Object o) {

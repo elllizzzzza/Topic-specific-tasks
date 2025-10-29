@@ -1,7 +1,12 @@
 package com.expertsoft.model;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import java.util.List;
 
+@Getter
+@Setter
 public class Order {
 
     public Order() {}
@@ -9,30 +14,6 @@ public class Order {
     private Long orderId;
     private PaymentInfo paymentInfo;
     private List<OrderItem> orderItems;
-
-    public Long getOrderId() {
-        return orderId;
-    }
-
-    public void setOrderId(Long orderId) {
-        this.orderId = orderId;
-    }
-
-    public PaymentInfo getPaymentInfo() {
-        return paymentInfo;
-    }
-
-    public void setPaymentInfo(PaymentInfo paymentInfo) {
-        this.paymentInfo = paymentInfo;
-    }
-
-    public List<OrderItem> getOrderItems() {
-        return orderItems;
-    }
-
-    public void setOrderItems(List<OrderItem> orderItems) {
-        this.orderItems = orderItems;
-    }
 
     @Override
     public boolean equals(Object o) {

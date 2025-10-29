@@ -71,7 +71,7 @@ public class CrazyOptionals {
      */
     public static Account getAccount(AccountProvider accountProvider, Account defaultAccount) {
         return accountProvider.getAccount()
-                .orElse(defaultAccount);
+                .orElseGet(() -> defaultAccount);
     }
 
     /**
